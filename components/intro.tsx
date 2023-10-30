@@ -18,26 +18,39 @@ export default function Intro() {
 		<section id="home" className="mb28 max-w-[60rem] sm:mb-0 scroll-m-[100rem]">
 			<div className="flex items-center justify-between p-4">
 				<div className="w-2/3 pr-4">
-					<div className={lexendGiga.className}>
-						<h1 className="text-3xl font-bold">SM Chemicals</h1>
-					</div>
-					<div className="mt-6 mb-11">
-						<p className="text-4xl font-medium intro-text-color text-left">
-							We take pride in offering comprehensive chemical solutions for a
-							wide range of{" "}
-							<span className="underline decoration-wavy">industries</span>.
-						</p>
-					</div>
-					<div className="mt-6 mb-10">
-						<p className="text-4xl text-black font-medium">
-							Aqua Culture, Water Treatment, Construction, Pharmaceuticals,
-							Polymers, etc.
-						</p>
-					</div>
 					<motion.div
-						className="flex flex-col sm:flex-row items-center justify-start gap-3 text-lg font-medium mt-10"
+						className={lexendGiga.className}
+						initial={{ opacity: 0, x: -100 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{
+							delay: 0.1,
+						}}>
+						<h1 className="text-3xl font-bold">SM Chemicals</h1>
+					</motion.div>
+					<motion.div
 						initial={{ opacity: 0, y: 100 }}
 						animate={{ opacity: 1, y: 0 }}
+						transition={{
+							delay: 0.1,
+						}}>
+						<div className="mt-12 mb-11">
+							<p className="text-4xl font-medium intro-text-color text-left">
+								We take pride in offering comprehensive chemical solutions for a
+								wide range of{" "}
+								<span className="underline decoration-wavy">industries</span>.
+							</p>
+						</div>
+						<div className="mt-6 mb-10">
+							<p className="text-4xl text-black font-medium">
+								Aqua Culture, Water Treatment, Construction, Pharmaceuticals,
+								Polymers, etc.
+							</p>
+						</div>
+					</motion.div>
+					<motion.div
+						className="flex flex-col sm:flex-row items-center justify-start gap-3 text-lg font-medium mt-10"
+						initial={{ opacity: 0, x: -100 }}
+						animate={{ opacity: 1, x: 0 }}
 						transition={{
 							delay: 0.1,
 						}}>
@@ -65,7 +78,9 @@ export default function Intro() {
 						initial={{ opacity: 0, x: 100 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{
-							delay:0.1,type: "spring", stiffness: 100
+							delay: 0.1,
+							type: "spring",
+							stiffness: 200,
 						}}>
 						<Image
 							src={testImg}

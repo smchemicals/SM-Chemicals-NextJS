@@ -20,7 +20,7 @@ export default function Intro() {
 				<div className="w-2/3 pr-4">
 					<motion.div
 						className={lexendGiga.className}
-						initial={{ opacity: 0, x: -100 }}
+						initial={{ opacity: 0, x: -150 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{
 							delay: 0.1,

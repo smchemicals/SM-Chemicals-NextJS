@@ -15,32 +15,34 @@ const lexendGiga = Lexend_Giga({
 
 export default function Intro() {
 	return (
-		<section id="home" className="mb28 max-w-[60rem] sm:mb-0 scroll-m-[100rem]">
+		<section
+			id="home"
+			className="mb28 max-w-[70rem] sm:mb-0 scroll-m-[100rem] !mb-32">
 			<div className="flex items-center justify-between p-4">
 				<div className="w-2/3 pr-4">
-					<motion.div
-						className={lexendGiga.className}
+					<motion.h1
+						className={`${lexendGiga.className} text-3xl font-bold`}
 						initial={{ opacity: 0, x: -150 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{
 							delay: 0.1,
 						}}>
-						<h1 className="text-3xl font-bold">SM Chemicals</h1>
-					</motion.div>
+						SM Chemicals
+					</motion.h1>
 					<motion.div
 						initial={{ opacity: 0, y: 100 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{
 							delay: 0.1,
 						}}>
-						<div className="mt-12 mb-11">
+						<div className="mt-16 mb-11">
 							<p className="text-4xl font-medium intro-text-color text-left">
 								We take pride in offering comprehensive chemical solutions for a
 								wide range of{" "}
 								<span className="underline decoration-wavy">industries</span>.
 							</p>
 						</div>
-						<div className="mt-6 mb-10">
+						<div className="mt-16 mb-11">
 							<p className="text-4xl text-black font-medium">
 								Aqua Culture, Water Treatment, Construction, Pharmaceuticals,
 								Polymers, etc.
@@ -48,7 +50,7 @@ export default function Intro() {
 						</div>
 					</motion.div>
 					<motion.div
-						className="flex flex-col sm:flex-row items-center justify-start gap-3 text-lg font-medium mt-10"
+						className="flex flex-col sm:flex-row items-center justify-start gap-3 text-lg font-medium !mt-16"
 						initial={{ opacity: 0, x: -100 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{
@@ -56,10 +58,9 @@ export default function Intro() {
 						}}>
 						<a
 							className="group bg-emerald-950 text-white px-7 py-3 flex items-center gap-4 rounded-3xl outline-none focus:scale-[1.02] hover:scale-[1.05] hover:bg-gray-950 active:scale-[1.02] transition cursor-pointer"
-							href="/CV.pdf"
-							target="_bank"
-							rel="noopener noreferrer"
-							download={true}>
+							href="products"
+							target="_self"
+							rel="noopener noreferrer">
 							Browse Products list{" "}
 							<BsArrowUpRight className="opacity-70 group-hover:-translate-y-1 transition" />
 						</a>

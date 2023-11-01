@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 
+import { Lexend_Zetta,  } from "next/font/google";
+
+const lexendZetta = Lexend_Zetta({
+	weight: "400",
+	subsets: ["latin"],
+});
+
 export default function Header() {
 	return (
 		<header className="z-[999] relative">
@@ -13,8 +20,7 @@ export default function Header() {
 				initial={{ y: -100, x: "-50%", opacity: 0 }}
 				animate={{ y: 0, x: "-50%", opacity: 1 }}></motion.div>
 			<nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-
-            <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5 mr-96">
+            <ul className={`${lexendZetta.className} flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-4 mr-80`}>
 					{smcText.map((text) => (
 						<motion.li
 							className="h-3/4 flex items-center justify-center relative"

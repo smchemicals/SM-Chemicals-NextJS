@@ -21,7 +21,7 @@ export default function Intro() {
 			<div className="flex items-center justify-between p-4">
 				<div className="w-2/3 pr-4">
 					<motion.h1
-						className={`${lexendGiga.className} text-3xl font-bold`}
+						className={`${lexendGiga.className} text-4xl !font-semibold`}
 						initial={{ opacity: 0, x: -150 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{
@@ -43,8 +43,8 @@ export default function Intro() {
 							</p>
 						</div>
 						<div className="mt-16 mb-11">
-							<p className="text-4xl text-black font-medium">
-								Aqua Culture, Water Treatment, Construction, Pharmaceuticals,
+							<p className="text-4xl font-medium">
+								<span className="text-zinc-950">Aqua Culture</span>, Water Treatment, Construction, Pharmaceuticals,
 								Polymers, etc.
 							</p>
 						</div>

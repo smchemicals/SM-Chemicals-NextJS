@@ -77,7 +77,7 @@ export default function AboutUs() {
 										{/* Added flex flex-col justify-center items-center */}
 										<div className="text-5xl">
 											<div className="flex justify-center">{card.icon}</div>
-											<h3 className="text-xs flex justify-center font-semibold mt-4">
+											<h3 className="text-xs flex justify-center font-semibold mt-4 text-center">
 												{card.title}
 											</h3>
 										</div>

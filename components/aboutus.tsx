@@ -34,7 +34,7 @@ export default function AboutUs() {
 								delay: 0.1,
 							}}>
 							<div className="mt-12 mb-11">
-								<p className="text-2xl font-medium text-white text-left">
+								<p className="text-xl font-light text-white text-left">
 									Established in 2000, S M Chemicals has been a leading
 									manufacturer and marketer of chemicals in Hyderabad for over
 									23 years. With a strong focus on quality and customer
@@ -42,14 +42,14 @@ export default function AboutUs() {
 								</p>
 							</div>
 							<div className="mt-6 mb-11">
-								<p className="text-2xl text-white font-medium">
+								<p className="text-xl font-light text-white text-left">
 									Led by our esteemed CEO, Mr. Partha Sarathi, who brings
 									extensive technical and commercial expertise in total water
 									management, including effluent water treatment.
 								</p>
 							</div>
 							<div className="mt-6 mb-11">
-								<p className="text-2xl text-white font-medium">
+								<p className="text-xl font-light text-white text-left">
 									We pride ourselves on our commitment to innovation and
 									sustainability, ensuring that our clients receive top-notch,
 									eco-friendly chemical solutions.
@@ -72,13 +72,15 @@ export default function AboutUs() {
 								{aboutCards.map((card, index) => (
 									<div
 										key={index}
-										className="bg-lime-100 p-6 rounded-lg shadow-md h-48 w-48">
-										<div className="text-5xl flex justify-center">
-											{card.icon}
+										className="bg-lime-100 p-6 rounded-lg shadow-2xl h-48 w-48 flex flex-col justify-center items-center">
+										{" "}
+										{/* Added flex flex-col justify-center items-center */}
+										<div className="text-5xl">
+											<div className="flex justify-center">{card.icon}</div>
+											<h3 className="text-xs flex justify-center font-semibold mt-4">
+												{card.title}
+											</h3>
 										</div>
-										<h3 className="text-xl flex justify-center font-semibold mt-4">
-											{card.title}
-										</h3>
 									</div>
 								))}
 							</div>

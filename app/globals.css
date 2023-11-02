@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.background{
-    background-color:#c5dbe2;
+.background {
+	background-color: #c5dbe2;
 }
 
-.intro-text-color{
-    color: #0e3531;
+.intro-text-color {
+	color: #0e3531;
 }

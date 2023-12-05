@@ -18,9 +18,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="!scroll-smooth">
-			<head>
-				<script async src="https://tally.so/widgets/embed.js"></script>
-			</head>
 			<body
 				className={`${inter.className} background text-gray-950 relative pt-28 sm:pt-36`}>
 				<Header />

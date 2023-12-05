@@ -1,5 +1,5 @@
 import React from "react";
-import { FiDollarSign, FiPackage, FiTool, FiUsers } from "react-icons/fi";
+import { FiBriefcase, FiDollarSign, FiHome, FiInfo, FiList, FiMail, FiPackage, FiTool, FiUsers } from "react-icons/fi";
 
 export const smcText = [
 	{
@@ -11,22 +11,27 @@ export const smcText = [
 export const links = [
 	{
 		name: "Home",
+		icon: React.createElement(FiHome ),
 		hash: "#home",
 	},
 	{
 		name: "About Us",
+		icon: React.createElement(FiInfo),
 		hash: "#aboutus",
 	},
 	{
 		name: "Products List",
+		icon: React.createElement(FiList),
 		hash: "#productslist",
 	},
 	{
 		name: "Contact Us",
+		icon: React.createElement(FiMail),
 		hash: "#contactus",
 	},
 	{
 		name: "Career",
+		icon: React.createElement(FiBriefcase),
 		hash: "#career",
 	},
 ] as const;
@@ -50,4 +55,25 @@ export const aboutCards = [
 	},
 ] as const;
 
-export const aboutText = {};
+export const industriesData = [
+	"Aqua Culture",
+	"Biomass Power Plants",
+	"Cement",
+	"Ceramic",
+	"Construction",
+	"Detergent",
+	"Distillery",
+	"ETP/STP Treatment",
+	"Food and Beverages",
+	"Meat Industries",
+	"Oil Industries",
+	"Paints",
+	"Paper and Pulp Industries",
+	"Pharmaceuticals",
+	"Polymers",
+	"Polyelectrolytes",
+	"Poultry",
+	"Sanitation",
+	"Steel",
+	"Water Treatment",
+] as const;

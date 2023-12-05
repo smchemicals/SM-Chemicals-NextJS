@@ -17,9 +17,10 @@ export default function Intro() {
 	return (
 		<section
 			id="home"
-			className="mb28 max-w-[70rem] sm:mb-0 scroll-m-[100rem] !mb-32">
-			<div className="flex items-center justify-between p-4">
-				<div className="w-2/3 pr-4">
+			className="sm:mb-28 scroll-m-[100rem]  sm:container mx-auto sm:p-8">
+			<div className="flex flex-col md:flex-row items-center justify-between p-4">
+				{/* Show the image on top for smaller screens and on the right for larger screens */}
+				<div className="w-full md:w-2/3 pr-4 md:order-1">
 					<motion.h1
 						className={`${lexendGiga.className} text-4xl !font-semibold`}
 						initial={{ opacity: 0, x: -150 }}
@@ -27,7 +28,10 @@ export default function Intro() {
 						transition={{
 							delay: 0.1,
 						}}>
-						SM Chemicals
+						SM Chemicals {" "} <br/>
+						<span className="text-sm text-gray-500">
+							- Chemical Excellence, Delivered!
+						</span>
 					</motion.h1>
 					<motion.div
 						initial={{ opacity: 0, y: 100 }}
@@ -44,13 +48,13 @@ export default function Intro() {
 						</div>
 						<div className="mt-16 mb-11">
 							<p className="text-4xl font-medium">
-								<span className="text-zinc-950">Aqua Culture</span>, Water Treatment, Construction, Pharmaceuticals,
-								Polymers, etc.
+								<span className="text-zinc-950">Aqua Culture</span>, Water
+								Treatment, Construction, Pharmaceuticals, Polymers, etc.
 							</p>
 						</div>
 					</motion.div>
 					<motion.div
-						className="flex flex-col sm:flex-row items-center justify-start gap-3 text-lg font-medium !mt-16"
+						className="flex flex-col md:flex-row items-center justify-start gap-3 text-lg font-medium !mt-16"
 						initial={{ opacity: 0, x: -100 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{
@@ -73,11 +77,13 @@ export default function Intro() {
 					</motion.div>
 				</div>
 
-				<div className="w-1/3">
+				{/* Hide the image on smaller screens */}
+				<div className="w-1/2 md:w-1/4 md:order-2 hidden md:block sm:hidden">
+					{/* ... (no content inside, so it won't take up space) */}
 					<motion.div
-						className="h-64 mix-blend-multiply"
-						initial={{ opacity: 0, x: 100 }}
-						animate={{ opacity: 1, x: 0 }}
+						className="h-80 mix-blend-multiply"
+						initial={{ opacity: 0, y: -100 }}
+						animate={{ opacity: 1, y: 0 }}
 						transition={{
 							delay: 0.1,
 							type: "spring",
